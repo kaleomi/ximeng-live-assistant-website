@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07182b" />
+  <meta name="description" content="熙梦直播助手：直播弹幕接收、智能语音回复、音色克隆与 WebSocket 转发工具。" />
+  <title>熙梦直播助手｜让每一条弹幕，都被听见</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="熙梦直播助手首页">
+        <img src="assets/app-icon.webp" alt="" />
+        <span><b>熙梦</b>直播助手</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="主要导航">
+        <a href="#features">产品功能</a>
+        <a href="#guide">使用说明</a>
+        <a href="#voice">语音配置</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <a class="nav-download" href="downloads/熙梦直播助手-1.9.6-win.zip" download>
+        下载 v1.9.6 <span>↓</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Windows 桌面版 · v1.9.6</div>
+        <h1>让每一条弹幕<br /><em>都被听见</em></h1>
+        <p class="hero-lead">为直播互动打造的一站式控制台。实时接收弹幕，用你的音色自动回复，并把消息稳定转发给互动游戏与业务系统。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="downloads/熙梦直播助手-1.9.6-win.zip" download>
+            <span class="button-icon">↓</span>
+            下载 Windows 版
+          </a>
+          <a class="button button-ghost" href="#guide">查看使用说明 <span>↘</span></a>
+        </div>
+        <div class="hero-meta">
+          <span><i>✓</i> 解压即用</span>
+          <span><i>✓</i> 本地保存配置</span>
+          <span><i>✓</i> 支持三种语音引擎</span>
+        </div>
+      </div>
+
+      <div class="product-stage reveal" aria-label="熙梦直播助手界面示意">
+        <div class="stage-orbit orbit-one"></div>
+        <div class="stage-orbit orbit-two"></div>
+        <div class="app-window">
+          <div class="window-bar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <div class="window-title"><img src="assets/app-icon.webp" alt="" /> 熙梦直播助手</div>
+            <div class="window-live"><span></span> 接收中</div>
+          </div>
+          <div class="window-body">
+            <aside class="mock-sidebar">
+              <div class="cover-block"><span>LIVE</span><b>直播间信息</b></div>
+              <div class="stat-row"><span>在线观众</span><b>1,286</b></div>
+              <div class="stat-row"><span>累计观看</span><b>26,431</b></div>
+              <div class="stat-row"><span>本场点赞</span><b>8.9万</b></div>
+              <div class="connection-pill"><span></span> 已连接</div>
+            </aside>
+            <div class="mock-feed">
+              <div class="feed-heading"><b>实时弹幕</b><span>全部消息 · 128</span></div>
+              <div class="message-line">
+                <div class="avatar avatar-a">柒</div>
+                <div><b>小柒</b><p>主播今天状态也太好了！</p></div>
+                <time>刚刚</time>
+              </div>
+              <div class="message-line gift-line">
+                <div class="avatar avatar-b">星</div>
+                <div><b>星河</b><p>送出「梦幻星光」× 3</p></div>
+                <span class="gift-badge">礼物</span>
+              </div>
+              <div class="message-line">
+                <div class="avatar avatar-c">茶</div>
+                <div><b>晚风茶馆</b><p>这个怎么参加呀？</p></div>
+                <time>2秒</time>
+              </div>
+              <div class="ai-reply"><span>AI</span><p>欢迎新朋友！跟着屏幕提示就能参与啦～</p><i>正在播报</i></div>
+            </div>
+            <aside class="mock-controls">
+              <div class="control-label">房间连接</div>
+              <div class="fake-input">live.douyin.com / 123456 <b>连接</b></div>
+              <div class="control-label">语音助手</div>
+              <div class="voice-card">
+                <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
+                <div><b>GPT-SoVITS</b><span>自定义音色 · 1.0x</span></div>
+                <em>ON</em>
+              </div>
+              <div class="control-label">消息转发</div>
+              <div class="code-pill">ws://127.0.0.1:8765</div>
+              <div class="type-counts"><span>💬 86</span><span>♥ 31</span><span>🎁 11</span></div>
+            </aside>
+          </div>
+        </div>
+        <div class="floating-card card-voice"><span>◖))</span><div><b>语音回复</b><small>队列运行正常</small></div></div>
+        <div class="floating-card card-message"><span>✦</span><div><b>新礼物消息</b><small>感谢话术已触发</small></div></div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="产品亮点">
+      <div><strong>6</strong><span>类设置面板</span></div>
+      <i></i>
+      <div><strong>3</strong><span>种语音引擎</span></div>
+      <i></i>
+      <div><strong>4</strong><span>路预合成队列</span></div>
+      <i></i>
+      <div><strong>8765</strong><span>本地转发端口</span></div>
+    </section>
+
+    <section class="feature-section section-shell" id="features">
+      <div class="section-heading reveal">
+        <div class="section-kicker">CORE FEATURES · 核心能力</div>
+        <h2>把直播间的消息，变成<br />可以行动的内容</h2>
+        <p>接收、理解、播报、转发集中在一个工作台，无需在多个工具之间来回切换。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-main reveal">
+          <div class="feature-icon icon-chat">⌁</div>
+          <div class="feature-index">01</div>
+          <h3>实时弹幕接收</h3>
+          <p>分类展示聊天、礼物、关注、点赞、进场和直播状态，断线后自动重连。</p>
+          <div class="mini-feed">
+            <span><i class="mini-avatar cyan"></i><b>欢迎来到直播间</b><em>聊天</em></span>
+            <span><i class="mini-avatar pink"></i><b>送出星光 × 1</b><em>礼物</em></span>
+            <span><i class="mini-avatar amber"></i><b>关注了主播</b><em>关注</em></span>
+          </div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon icon-voice">≋</div>
+          <div class="feature-index">02</div>
+          <h3>智能语音回复</h3>
+          <p>支持弹幕回答、礼物感谢、进场欢迎、点赞关注和冷场闲聊，播报顺序稳定。</p>
+          <div class="spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon icon-tone">◉</div>
+          <div class="feature-index">03</div>
+          <h3>本地声音克隆</h3>
+          <p>接入 GPT-SoVITS 与 IndexTTS-2，上传参考音频即可使用自己的直播音色。</p>
+          <div class="engine-tags"><span>GPT-SoVITS</span><span>IndexTTS-2</span><span>OpenAI API</span></div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon icon-flow">⇄</div>
+          <div class="feature-index">04</div>
+          <h3>本地消息转发</h3>
+          <p>通过 WebSocket 输出结构化消息，方便接入互动游戏、数据看板与自动化工具。</p>
+          <div class="code-sample"><span>ws://127.0.0.1:8765</span><b>CONNECTED</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section" id="guide">
+      <div class="section-shell">
+        <div class="section-heading light reveal">
+          <div class="section-kicker">QUICK START · 使用说明</div>
+          <h2>四步完成第一次直播连接</h2>
+          <p>所有配置保存在本机。建议先完成直播连接，再开启语音回复和扩展功能。</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon">↓</div>
+            <h3>下载并解压</h3>
+            <p>下载 Windows 压缩包，完整解压到英文或中文目录，双击“熙梦直播助手.exe”。</p>
+            <small>不要直接在压缩包内运行</small>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">02</span>
+            <div class="step-icon">⌁</div>
+            <h3>登录获取凭证</h3>
+            <p>点击“扫码登录”，使用抖音 App 扫码，程序会自动获取 SessionID；也可以手动输入并保存。</p>
+            <small>凭证失效时重新扫码即可</small>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">03</span>
+            <div class="step-icon">◉</div>
+            <h3>连接直播间</h3>
+            <p>粘贴直播间房间号或分享链接，点击“连接”。左下角显示绿色“已连接”即表示成功。</p>
+            <small>网络拥堵时稍等后重试</small>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">04</span>
+            <div class="step-icon">≋</div>
+            <h3>开启语音助手</h3>
+            <p>进入“语音回复”，先选择音色与播报引擎，再配置 LLM、提示词和互动话术。</p>
+            <small>使用“试听”确认声音正常</small>
+          </article>
+        </div>
+
+        <div class="manual-panel reveal">
+          <div class="manual-tabs" role="tablist" aria-label="详细使用说明">
+            <button type="button" class="active" role="tab" aria-selected="true" data-guide="connect"><span>01</span>直播连接</button>
+            <button type="button" role="tab" aria-selected="false" data-guide="voice"><span>02</span>语音与音色</button>
+            <button type="button" role="tab" aria-selected="false" data-guide="llm"><span>03</span>LLM 接口</button>
+            <button type="button" role="tab" aria-selected="false" data-guide="relay"><span>04</span>转发与扩展</button>
+          </div>
+          <div class="manual-content">
+            <article class="guide-pane active" id="guide-connect" role="tabpanel">
+              <div class="guide-copy">
+                <span class="guide-label">直播连接</span>
+                <h3>先登录，再连接房间</h3>
+                <ol>
+                  <li><b>获取 SessionID</b><p>点击左侧“扫码登录，自动获取 SessionID”，扫码成功后凭证会自动保存。手动输入时按回车或点击绿色按钮保存。</p></li>
+                  <li><b>填写直播间</b><p>在右上方输入房间号、直播间完整链接或分享链接，点击“连接”。</p></li>
+                  <li><b>确认状态</b><p>左侧连接状态变为绿色，中间弹幕列表开始出现消息，即可继续配置语音功能。</p></li>
+                </ol>
+              </div>
+              <div class="guide-visual login-visual">
+                <div class="visual-top"><span>凭证与连接</span><em>安全保存在本机</em></div>
+                <label>SESSIONID</label>
+                <div class="visual-input"><span>••••••••••••••••</span><b>✓</b></div>
+                <button type="button">▣ 扫码登录，自动获取 SessionID</button>
+                <label>直播间</label>
+                <div class="visual-input room"><span>live.douyin.com / 房间号</span><b>连接</b></div>
+                <div class="visual-success"><i></i><span><b>连接成功</b>正在接收直播消息</span></div>
+              </div>
+            </article>
+
+            <article class="guide-pane" id="guide-voice" role="tabpanel" hidden>
+              <div class="guide-copy">
+                <span class="guide-label">语音与音色</span>
+                <h3>选择适合你的发声方式</h3>
+                <ol>
+                  <li><b>选择播报引擎</b><p>GPT-SoVITS 和 IndexTTS-2 适合本地声音克隆；OpenAI 兼容 API 适合云端服务。</p></li>
+                  <li><b>准备本地引擎</b><p>使用本地引擎时，将完整的 <code>engine</code> 文件夹放在“熙梦直播助手.exe”旁边，再重启程序。</p></li>
+                  <li><b>上传参考音色</b><p>选择清晰、无背景音乐的人声片段。可上传多段音频融合音色，不上传则使用预设音色。</p></li>
+                  <li><b>试听与调整</b><p>调整音量、语速和采样参数，输入测试文本并试听，满意后再开启语音助手。</p></li>
+                </ol>
+              </div>
+              <div class="guide-visual voice-visual">
+                <div class="visual-top"><span>语音与音色</span><em>01 / 06</em></div>
+                <div class="engine-option selected"><i>G</i><span><b>GPT-SoVITS</b><small>本地 · 音色克隆</small></span><em>●</em></div>
+                <div class="engine-option"><i>I</i><span><b>IndexTTS-2</b><small>本地 · 情感自然</small></span><em>○</em></div>
+                <div class="engine-option"><i>A</i><span><b>OpenAI 兼容 API</b><small>云端或自建服务</small></span><em>○</em></div>
+                <div class="range-line"><span>音量 70%</span><i><b style="width:70%"></b></i></div>
+                <button type="button" class="secondary-button">▶ 试听当前音色</button>
+              </div>
+            </article>
+
+            <article class="guide-pane" id="guide-llm" role="tabpanel" hidden>
+              <div class="guide-copy">
+                <span class="guide-label">LLM 接口</span>
+                <h3>让回复更贴合直播风格</h3>
+                <ol>
+                  <li><b>填写 API 信息</b><p>支持 OpenAI 兼容协议。填写 Base URL、API Key 和模型名称；本地免鉴权服务可不填 Key。</p></li>
+                  <li><b>测试连接</b><p>输入一条模拟弹幕，点击“测试连接与回复”，先确认接口能够正常返回文字。</p></li>
+                  <li><b>编辑两类提示词</b><p>“弹幕回复”控制观众问答，“冷场闲聊”控制无人发言时的主动话术，两者互不覆盖。</p></li>
+                  <li><b>设置触发规则</b><p>按需要调整回复间隔、过滤词和本地关键词规则，避免短时间内重复播报。</p></li>
+                </ol>
+              </div>
+              <div class="guide-visual llm-visual">
+                <div class="visual-top"><span>LLM 接口</span><em>02 / 06</em></div>
+                <label>API 地址</label>
+                <div class="visual-input"><span>https://provider.example/v1</span></div>
+                <div class="input-pair"><div><label>API Key</label><span>sk-••••••••</span></div><div><label>模型</label><span>chat-model</span></div></div>
+                <div class="test-prompt"><span>模拟弹幕</span><p>主播你好，今天聊什么？</p></div>
+                <button type="button">测试连接与回复 <span>→</span></button>
+                <div class="reply-line"><i>AI</i><span>欢迎来到直播间，今天一起聊点轻松的～</span></div>
+              </div>
+            </article>
+
+            <article class="guide-pane" id="guide-relay" role="tabpanel" hidden>
+              <div class="guide-copy">
+                <span class="guide-label">转发与扩展</span>
+                <h3>把弹幕接入你的互动系统</h3>
+                <ol>
+                  <li><b>启动本地转发</b><p>程序默认监听 <code>ws://127.0.0.1:8765</code>。点击“转发”后，客户端即可接收结构化 JSON 消息。</p></li>
+                  <li><b>连接业务客户端</b><p>互动游戏、数据面板或自动化脚本连接该地址，按消息类型处理聊天、礼物、点赞等事件。</p></li>
+                  <li><b>按类型处理消息</b><p>转发内容包含聊天、礼物、点赞、进场、关注和直播状态等类型，可分别触发不同业务逻辑。</p></li>
+                  <li><b>保持本机连接</b><p>默认地址只监听本机回环网络。需要跨设备使用时，请自行增加安全的网关、鉴权和访问限制。</p></li>
+                </ol>
+              </div>
+              <div class="guide-visual relay-visual">
+                <div class="visual-top"><span>WebSocket 转发</span><em class="online">● ONLINE</em></div>
+                <div class="terminal-line"><span>$</span> connect ws://127.0.0.1:8765</div>
+                <pre>{
+  <b>"method"</b>: "WebcastGiftMessage",
+  <b>"user"</b>: { "name": "星河" },
+  <b>"gift"</b>: { "name": "小心心", "count": 3 }
+}</pre>
+                <button class="copy-address" type="button" data-copy="ws://127.0.0.1:8765">复制转发地址</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voice-section section-shell" id="voice">
+      <div class="voice-copy reveal">
+        <div class="section-kicker">VOICE PIPELINE · 语音能力</div>
+        <h2>你的声音，按顺序<br />回应每一份热情</h2>
+        <p>四路预合成降低等待时间，播放端仍严格保持消息顺序。接口限流或短时失败时自动重试，减少漏播。</p>
+        <div class="voice-points">
+          <div><span>01</span><p><b>三种引擎自由切换</b>本地 GPT-SoVITS、IndexTTS-2 或 OpenAI 兼容语音 API。</p></div>
+          <div><span>02</span><p><b>一套音色覆盖多场景</b>弹幕回复、礼物感谢、进场欢迎、点赞与关注均可播报。</p></div>
+          <div><span>03</span><p><b>节奏和边界可控制</b>配置触发频率、过滤词、队列上限、音量与语速。</p></div>
+        </div>
+      </div>
+      <div class="pipeline-card reveal">
+        <div class="pipeline-head"><span>播报流水线</span><em>运行正常</em></div>
+        <div class="pipeline-row"><span class="pipeline-num">01</span><div class="pipeline-info"><b>“谢谢星河送来的礼物～”</b><small>GPT-SoVITS · 已生成</small></div><div class="playing-bars"><i></i><i></i><i></i><i></i></div></div>
+        <div class="pipeline-row"><span class="pipeline-num">02</span><div class="pipeline-info"><b>“欢迎小柒来到直播间”</b><small>合成中 · 68%</small></div><div class="progress-ring">68</div></div>
+        <div class="pipeline-row muted"><span class="pipeline-num">03</span><div class="pipeline-info"><b>“这个问题我来回答你”</b><small>等待播放 · 队列 1</small></div><span class="queue-dot"></span></div>
+        <div class="pipeline-row muted"><span class="pipeline-num">04</span><div class="pipeline-info"><b>“喜欢的话点个关注哦”</b><small>预合成 · 队列 2</small></div><span class="queue-dot"></span></div>
+        <div class="pipeline-foot"><span><i></i> 本地服务 127.0.0.1:9880</span><b>4 路并发</b></div>
+      </div>
+    </section>
+
+    <section class="requirements-section">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div class="section-kicker">BEFORE YOU START · 运行准备</div>
+          <h2>下载前，确认这些条件</h2>
+        </div>
+        <div class="requirement-grid">
+          <article class="requirement-card reveal"><span>WIN</span><h3>Windows 10 / 11</h3><p>64 位系统；首次启动如遇安全提示，请确认文件来源后选择继续运行。</p></article>
+          <article class="requirement-card reveal"><span>NET</span><h3>稳定的网络连接</h3><p>弹幕接收、扫码登录和云端 API 需要联网。本地语音合成可离线运行。</p></article>
+          <article class="requirement-card reveal"><span>AI</span><h3>语音引擎按需安装</h3><p>只看弹幕无需安装引擎。使用本地声音克隆时，再将 engine 文件夹放到 EXE 旁。</p></article>
+        </div>
+        <div class="notice-card reveal">
+          <div class="notice-icon">!</div>
+          <div><b>本地引擎使用同一个 9880 端口</b><p>GPT-SoVITS 与 IndexTTS-2 同一时间只能运行一个。切换时软件会自动停止旧引擎并启动新引擎；如端口被占用，可在“队列与连接”中释放并重启。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-shell" id="faq">
+      <div class="faq-intro reveal">
+        <div class="section-kicker">FAQ · 常见问题</div>
+        <h2>遇到问题，先从这里排查</h2>
+        <p>大多数连接与播报问题都可以通过重新获取凭证、检查目录或释放端口解决。</p>
+        <a href="#guide">返回使用说明 ↑</a>
+      </div>
+      <div class="faq-list">
+        <details class="reveal" open><summary>连接直播间后一直没有弹幕怎么办？<span>＋</span></summary><p>先确认直播间正在开播，并检查左下角连接状态。若提示凭证失效，重新扫码获取 SessionID；若网络拥堵，断开后等待几秒再连接。</p></details>
+        <details class="reveal"><summary>本地语音引擎提示“未找到”怎么办？<span>＋</span></summary><p>检查程序目录下是否存在完整的 <code>engine</code> 文件夹，并确保它与“熙梦直播助手.exe”处于同一级目录。补齐后完全退出软件再重新打开。</p></details>
+        <details class="reveal"><summary>试听没有声音，或者一直显示启动中？<span>＋</span></summary><p>到“队列与连接”查看服务状态。确认 9880 端口没有被其他程序占用，必要时点击“释放 9880 并重启引擎”。首次加载模型耗时会更长。</p></details>
+        <details class="reveal"><summary>LLM 测试失败应该检查什么？<span>＋</span></summary><p>核对 API 地址、Key 和模型 ID。地址可填写 Base URL，也可填写以 <code>/chat/completions</code> 结尾的完整地址。本地免鉴权服务可以留空 Key。</p></details>
+        <details class="reveal"><summary>SessionID 会上传到其他服务器吗？<span>＋</span></summary><p>SessionID 保存在本机，用于建立直播间连接。请不要向他人发送或公开展示凭证；失效后重新扫码获取即可。</p></details>
+      </div>
+    </section>
+
+    <section class="download-section">
+      <div class="download-inner section-shell reveal">
+        <img src="assets/app-icon.webp" alt="熙梦直播助手图标" />
+        <div><span>熙梦直播助手 · v1.9.6</span><h2>准备好你的下一场直播</h2><p>从弹幕接收到智能语音回复，一个工作台就够了。</p></div>
+        <a class="button button-light" href="downloads/熙梦直播助手-1.9.6-win.zip" download>下载 Windows 版 <span>↓</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner section-shell">
+      <div class="footer-brand"><img src="assets/app-icon.webp" alt="" /><div><b>熙梦直播助手</b><span>直播互动工作台</span></div></div>
+      <p>本软件用于合法直播互动与学习交流。使用时请遵守平台规则和当地法律法规。</p>
+      <span>© 2026 熙梦直播助手</span>
+    </div>
+  </footer>
+
+  <button class="back-top" type="button" aria-label="返回顶部">↑</button>
+  <div class="toast" role="status" aria-live="polite">已复制转发地址</div>
+  <script src="app.js"></script>
+</body>
+</html>
