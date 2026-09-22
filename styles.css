@@ -214,6 +214,31 @@ pre {
   color: var(--mint);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.nav-purchase {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  border: 1px solid rgba(9, 157, 156, 0.24);
+  border-radius: 13px;
+  color: var(--cyan-deep);
+  background: #effaf7;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-purchase:hover {
+  background: #dff6ef;
+  transform: translateY(-2px);
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -332,6 +357,24 @@ pre {
 
 .button-primary:hover {
   box-shadow: 0 19px 34px rgba(9, 157, 156, 0.32);
+}
+
+.button-purchase {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff8a34, #f25f3a);
+  box-shadow: 0 15px 28px rgba(242, 95, 58, 0.25);
+}
+
+.button-purchase:hover {
+  box-shadow: 0 19px 34px rgba(242, 95, 58, 0.34);
+}
+
+.inline-purchase {
+  margin: 0 4px;
+  color: var(--cyan-deep);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .button-icon {
@@ -1864,6 +1907,12 @@ pre {
 
 .button-light span { color: var(--cyan-deep); font-size: 18px; }
 
+.download-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .site-footer {
   padding: 45px 0;
 }
@@ -2055,7 +2104,7 @@ pre {
   }
 
   .main-nav a::after { display: none; }
-  .nav-download { display: none; }
+  .nav-actions { display: none; }
 
   .proof-strip {
     display: grid;
@@ -2093,9 +2142,11 @@ pre {
     border-radius: 21px;
   }
 
-  .download-inner .button {
+  .download-inner .download-actions {
     grid-column: 1 / -1;
     justify-self: start;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .footer-inner {
