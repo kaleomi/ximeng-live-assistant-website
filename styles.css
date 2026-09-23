@@ -1780,6 +1780,92 @@ pre {
 .notice-card b { font-size: 13px; }
 .notice-card p { margin: 5px 0 0; color: #7e715c; font-size: 11px; line-height: 1.75; }
 
+.updates-section {
+  padding-top: 110px;
+  padding-bottom: 105px;
+}
+
+.updates-section .section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.updates-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--cyan-deep);
+  font-weight: 800;
+}
+
+.updates-doc-link:hover {
+  color: var(--ink);
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.update-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 16px 38px rgba(17, 52, 65, 0.07);
+}
+
+.update-card.current {
+  border-color: rgba(9, 157, 156, 0.38);
+  background: linear-gradient(145deg, #f2fffb, #ffffff);
+}
+
+.update-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.update-meta b {
+  color: var(--cyan-deep);
+  font-size: 18px;
+}
+
+.update-meta span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.update-meta em {
+  margin-left: auto;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #08756f;
+  background: #dff8ef;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.update-card h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.update-card ul {
+  margin: 0;
+  padding-left: 19px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.update-card li + li {
+  margin-top: 7px;
+}
 .faq-section {
   padding-block: 130px;
   display: grid;
@@ -2115,8 +2201,95 @@ pre {
   .proof-strip > i { display: none; }
 
   .feature-grid,
+  .updates-grid,
   .voice-section,
-  .faq-section {
+  .updates-section {
+  padding-top: 110px;
+  padding-bottom: 105px;
+}
+
+.updates-section .section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.updates-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--cyan-deep);
+  font-weight: 800;
+}
+
+.updates-doc-link:hover {
+  color: var(--ink);
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.update-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 16px 38px rgba(17, 52, 65, 0.07);
+}
+
+.update-card.current {
+  border-color: rgba(9, 157, 156, 0.38);
+  background: linear-gradient(145deg, #f2fffb, #ffffff);
+}
+
+.update-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.update-meta b {
+  color: var(--cyan-deep);
+  font-size: 18px;
+}
+
+.update-meta span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.update-meta em {
+  margin-left: auto;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #08756f;
+  background: #dff8ef;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.update-card h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.update-card ul {
+  margin: 0;
+  padding-left: 19px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.update-card li + li {
+  margin-top: 7px;
+}
+.faq-section {
     grid-template-columns: 1fr;
   }
 
@@ -2235,7 +2408,93 @@ pre {
 
   .feature-section,
   .voice-section,
-  .faq-section {
+  .updates-section {
+  padding-top: 110px;
+  padding-bottom: 105px;
+}
+
+.updates-section .section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.updates-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--cyan-deep);
+  font-weight: 800;
+}
+
+.updates-doc-link:hover {
+  color: var(--ink);
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.update-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 16px 38px rgba(17, 52, 65, 0.07);
+}
+
+.update-card.current {
+  border-color: rgba(9, 157, 156, 0.38);
+  background: linear-gradient(145deg, #f2fffb, #ffffff);
+}
+
+.update-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.update-meta b {
+  color: var(--cyan-deep);
+  font-size: 18px;
+}
+
+.update-meta span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.update-meta em {
+  margin-left: auto;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #08756f;
+  background: #dff8ef;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.update-card h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.update-card ul {
+  margin: 0;
+  padding-left: 19px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.update-card li + li {
+  margin-top: 7px;
+}
+.faq-section {
     padding-bottom: 90px;
   }
 
@@ -2313,3 +2572,13 @@ pre {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== 2026-09 官网改版补充样式 ===== */
+.step-card { position: relative; }
+.step-flag { position: absolute; top: 18px; right: 18px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; color: var(--cyan-deep); background: rgba(42, 198, 186, 0.12); border: 1px solid rgba(42, 198, 186, 0.35); }
+.badge { display: inline-block; margin-right: 8px; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #34515e; background: rgba(12, 46, 62, 0.06); border: 1px solid var(--line); }
+.feature-line { display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.72); border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; font-size: 13px; text-align: left; }
+.feature-line i { flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: linear-gradient(135deg, var(--cyan), #5ad0f0); color: var(--white); font-size: 11px; font-weight: 700; font-style: normal; }
+.feature-line b { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.feature-line span { margin-left: auto; flex: none; color: var(--ink-soft); font-size: 12px; }
+@media (max-width: 720px) { .feature-line span { display: none; } }
