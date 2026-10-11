@@ -36,7 +36,7 @@
           购买激活码 <span>↗</span>
         </a>
         <a class="nav-download" href="https://pan.quark.cn/s/72c0295bae28?pwd=a874" target="_blank" rel="noopener noreferrer">
-          下载 v2.1.6 <span>↗</span>
+          下载 v2.1.9 <span>↗</span>
         </a>
       </div>
     </div>
@@ -45,7 +45,7 @@
   <main id="main">
     <section class="hero section-shell">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Windows 桌面版 · v2.1.6 · 抖音直播间</div>
+        <div class="eyebrow"><span class="status-dot"></span> Windows 桌面版 · v2.1.9 · 抖音直播间</div>
         <h1>不只是读弹幕，<br /><em>还会替你回复</em></h1>
         <p class="hero-lead">熙梦直播助手会看懂直播间的弹幕、礼物和进场，按你设定的话术或大模型生成的文案，用你的音色说出口。大模型和语音都能走本地，装一次，长期低成本使用。</p>
         <div class="hero-actions">
@@ -184,6 +184,20 @@
           <p>弹幕按类型转发到本地 WebSocket，接入 65 款直播互动游戏；本地音频素材库支持录音和定时播放。</p>
           <div class="engine-tags"><span>WebSocket 转发</span><span>65 款游戏</span><span>音频素材库</span></div>
         </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon icon-voice">⚑</div>
+          <div class="feature-index">07</div>
+          <h3>活体与防挂机提醒</h3>
+          <p>检测直播间弹出的活体、防挂机验证，立即在本机告警；还可按微信联系人备注名发送提醒并拨打微信语音电话。</p>
+          <div class="engine-tags"><span>本机警报</span><span>微信消息</span><span>微信语音电话</span></div>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon icon-flow">↻</div>
+          <div class="feature-index">08</div>
+          <h3>新版本自动提醒</h3>
+          <p>软件启动并完成授权后自动检查新版本，也可随时手动检查；发现新版会展示版本号、更新内容和下载入口。</p>
+          <div class="engine-tags"><span>启动检查</span><span>手动检查</span><span>一键下载</span></div>
+        </article>
       </div>
     </section>
 
@@ -264,7 +278,7 @@
                 <span class="guide-label">助手本体 · 直播工作台</span>
                 <h3>装好本体，连接直播间</h3>
                 <ol>
-                  <li><b>下载并解压</b><p>在网盘分享中下载“熙梦直播助手”最新安装包（文件名含 2.1.6），双击安装并按向导完成后，从桌面快捷方式启动。升级安装会保留现有配置和本地引擎。</p></li>
+                  <li><b>下载并安装</b><p>在网盘分享中下载“熙梦直播助手”最新安装包（文件名含 2.1.9），双击安装并按向导完成后，从桌面快捷方式启动。升级安装会保留现有配置和本地引擎。</p></li>
                   <li><b>扫码登录</b><p>点击“扫码登录”，用抖音 App 扫码自动获取 SessionID；凭证只保存在本机，失效后重新扫码即可。</p></li>
                   <li><b>连接直播间</b><p>粘贴房间号、直播间链接或分享链接，点击“连接”。左侧状态变绿、弹幕开始滚动即成功。</p></li>
                   <li><b>配置语音回复</b><p>进入“语音回复”，编辑智能回复提示词、六类互动话术和触发频率，打开总开关即可开播。</p></li>
@@ -372,12 +386,21 @@
       <div class="section-heading reveal">
         <div class="section-kicker">RELEASE NOTES · 更新记录</div>
         <h2>每一次更新，都更稳一点</h2>
-        <p>当前最新版为 v2.1.6。完整操作步骤可打开飞书使用文档查看。</p>
+        <p>当前最新版为 v2.1.9。完整操作步骤可打开飞书使用文档查看。</p>
         <a class="updates-doc-link" href="https://lcnod4qb2omp.feishu.cn/wiki/C0IrwCaTNi3jTckDICwcgnD4ngh?from=from_copylink" target="_blank" rel="noopener noreferrer">打开飞书使用文档 <span>↗</span></a>
       </div>
       <div class="updates-grid">
         <article class="update-card current reveal">
-          <div class="update-meta"><b>v2.1.6</b><span>2026-09-23</span><em>最新</em></div>
+          <div class="update-meta"><b>v2.1.9</b><span>2026-10-11</span><em>最新</em></div>
+          <h3>新增版本更新提醒</h3>
+          <ul>
+            <li>启动并完成授权后自动检查新版，同时增加手动检查更新入口。</li>
+            <li>发现新版时展示版本号、发布日期与更新内容，可直接打开官方下载页。</li>
+            <li>新增活体、防挂机验证的本机警报、微信消息与微信语音电话提醒。</li>
+          </ul>
+        </article>
+        <article class="update-card reveal">
+          <div class="update-meta"><b>v2.1.6</b><span>2026-09-23</span></div>
           <h3>本地大模型交互修复</h3>
           <ul>
             <li>修复“已连接本地 LLM”按钮悬停时始终显示加载光标的问题。</li>
@@ -417,6 +440,7 @@
         <details class="reveal"><summary>试听没有声音，或者一直显示启动中？<span>＋</span></summary><p>到“队列与连接”查看服务状态。确认 9880 端口没有被其他程序占用，必要时点击“释放 9880 并重启引擎”。首次加载模型耗时会更长。</p></details>
         <details class="reveal"><summary>LLM 测试失败应该检查什么？<span>＋</span></summary><p>本地安装包装好后，地址会自动识别为 http://127.0.0.1:11434/v1，Key 留空、模型 qwen2.5:7b。使用云端 API 时，核对地址、Key 和模型 ID；地址可填 Base URL，也可填以 <code>/chat/completions</code> 结尾的完整地址。</p></details>
         <details class="reveal"><summary>如何购买和使用激活码？<span>＋</span></summary><p>访问<a class="inline-purchase" href="https://wzyp.cn/shop/xialuoxi/318613" target="_blank" rel="noopener noreferrer">官方激活码购买页</a>完成购买，启动软件后将激活码填入激活界面即可。激活为月卡制，本机推理不按条数额外收费。</p></details>
+        <details class="reveal"><summary>软件如何检查和安装新版本？<span>＋</span></summary><p>从 v2.1.9 开始，软件启动并完成授权后会自动检查更新；也可在月卡状态区域点击“检查更新”。发现新版后点击“立即下载更新”，下载并运行新版安装包即可，原有配置和本地引擎会继续保留。</p></details>
         <details class="reveal"><summary>SessionID 会上传到其他服务器吗？<span>＋</span></summary><p>SessionID 保存在本机，用于建立直播间连接。请不要向他人发送或公开展示凭证；失效后重新扫码获取即可。</p></details>
       </div>
     </section>
@@ -424,7 +448,7 @@
     <section class="download-section">
       <div class="download-inner section-shell reveal">
         <img src="assets/app-icon.webp" alt="熙梦直播助手图标" />
-        <div><span>熙梦直播助手 · v2.1.6</span><h2>准备好你的下一场直播</h2><p>从弹幕接收到智能语音回复，一个工作台就够了。网盘分享内含助手本体、本地大模型与语音引擎三个安装包。</p></div>
+        <div><span>熙梦直播助手 · v2.1.9</span><h2>准备好你的下一场直播</h2><p>从弹幕接收到智能语音回复，一个工作台就够了。网盘分享内含助手本体、本地大模型与语音引擎三个安装包。</p></div>
         <div class="download-actions">
           <a class="button button-purchase" href="https://wzyp.cn/shop/xialuoxi/318613" target="_blank" rel="noopener noreferrer">购买激活码 <span>↗</span></a>
           <a class="button button-ghost" href="https://lcnod4qb2omp.feishu.cn/wiki/C0IrwCaTNi3jTckDICwcgnD4ngh?from=from_copylink" target="_blank" rel="noopener noreferrer">使用文档 <span>↗</span></a>

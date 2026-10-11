@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "version": "2.1.9",
+  "title": "熙梦直播助手 2.1.9",
+  "publishedAt": "2026-10-11",
+  "downloadUrl": "https://pan.quark.cn/s/72c0295bae28?pwd=a874",
+  "websiteUrl": "https://kaleomi.github.io/ximeng-live-assistant-website/",
+  "notes": [
+    "新增启动自动检查更新和手动检查更新入口",
+    "新增活体、防挂机验证的本机警报与微信远程提醒",
+    "支持按微信联系人备注名发送消息并拨打微信语音电话",
+    "优化本地模型和后台服务的启动、退出与状态显示"
+  ],
+  "sha256": "B10A1C1386CC2321E9768C8DA79A8F2C0FCCE0B06EC72C4545885CA8C1236089"
+}
