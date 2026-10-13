@@ -27,6 +27,7 @@
         <a href="#features">产品功能</a>
         <a href="#guide">安装引导</a>
         <a href="#voice">语音配置</a>
+        <a href="#requirements">配置要求</a>
         <a href="#updates">更新记录</a>
         <a href="#faq">常见问题</a>
         <a href="https://lcnod4qb2omp.feishu.cn/wiki/C0IrwCaTNi3jTckDICwcgnD4ngh?from=from_copylink" target="_blank" rel="noopener noreferrer">使用文档 ↗</a>
@@ -36,7 +37,7 @@
           购买激活码 <span>↗</span>
         </a>
         <a class="nav-download" href="https://pan.quark.cn/s/72c0295bae28?pwd=a874" target="_blank" rel="noopener noreferrer">
-          下载 v2.1.9 <span>↗</span>
+          下载 v2.1.19 <span>↗</span>
         </a>
       </div>
     </div>
@@ -45,7 +46,7 @@
   <main id="main">
     <section class="hero section-shell">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Windows 桌面版 · v2.1.9 · 抖音直播间</div>
+        <div class="eyebrow"><span class="status-dot"></span> Windows 桌面版 · v2.1.19 · 抖音直播间</div>
         <h1>不只是读弹幕，<br /><em>还会替你回复</em></h1>
         <p class="hero-lead">熙梦直播助手会看懂直播间的弹幕、礼物和进场，按你设定的话术或大模型生成的文案，用你的音色说出口。大模型和语音都能走本地，装一次，长期低成本使用。</p>
         <div class="hero-actions">
@@ -215,7 +216,7 @@
             <div class="step-icon">◆</div>
             <h3>装本地大模型</h3>
             <p>从网盘下载“一键安装本地大模型”安装包，双击等待完成。助手会自动识别并填写，零成本生成回复。</p>
-            <small>约 12GB 磁盘 · 建议 16GB 内存 · 无独显可用</small>
+            <small>最低 16GB 内存 · 约 12GB 磁盘 · 无独显可用</small>
           </article>
           <article class="step-card reveal">
             <span class="step-number">02</span>
@@ -257,7 +258,7 @@
                 <h3>先给助手一个“大脑”</h3>
                 <ol>
                   <li><b>获取安装包</b><p>打开官网同款网盘分享，进入“大语言模型 / Ollama”文件夹，下载完整安装包（含 OllamaSetup.exe 与 qwen2.5:7b 模型包）。</p></li>
-                  <li><b>一键安装</b><p>双击“一键安装本地大模型.exe”，等待提示安装完成。需约 12GB 磁盘空间，建议 16GB 内存；有 NVIDIA / AMD 显卡更快，无独显也能用 CPU 运行。</p></li>
+                  <li><b>一键安装</b><p>双击“一键安装本地大模型.exe”，等待提示安装完成。Qwen2.5 7B 模型约 4.7GB，整套安装建议预留 12GB；最低 16GB 内存，无独显也能使用 CPU 运行。</p></li>
                   <li><b>在助手中启用</b><p>打开熙梦直播助手 → 语音回复 → LLM 接口。本地地址 http://127.0.0.1:11434/v1 会被自动识别填写，点“测试连接与回复”确认即可。</p></li>
                   <li><b>或者走云端 API</b><p>不想装本地模型？在 LLM 接口里填任意 OpenAI 兼容地址、API Key 和模型名，回复更聪明，按用量付费。</p></li>
                 </ol>
@@ -278,7 +279,7 @@
                 <span class="guide-label">助手本体 · 直播工作台</span>
                 <h3>装好本体，连接直播间</h3>
                 <ol>
-                  <li><b>下载并安装</b><p>在网盘分享中下载“熙梦直播助手”最新安装包（文件名含 2.1.9），双击安装并按向导完成后，从桌面快捷方式启动。升级安装会保留现有配置和本地引擎。</p></li>
+                  <li><b>下载并安装</b><p>在网盘分享中下载“熙梦直播助手”最新安装包（文件名含 2.1.19），双击安装并按向导完成后，从桌面快捷方式启动。升级安装会保留现有配置和本地引擎。</p></li>
                   <li><b>扫码登录</b><p>点击“扫码登录”，用抖音 App 扫码自动获取 SessionID；凭证只保存在本机，失效后重新扫码即可。</p></li>
                   <li><b>连接直播间</b><p>粘贴房间号、直播间链接或分享链接，点击“连接”。左侧状态变绿、弹幕开始滚动即成功。</p></li>
                   <li><b>配置语音回复</b><p>进入“语音回复”，编辑智能回复提示词、六类互动话术和触发频率，打开总开关即可开播。</p></li>
@@ -364,20 +365,20 @@
       </div>
     </section>
 
-    <section class="requirements-section">
+    <section class="requirements-section" id="requirements">
       <div class="section-shell">
         <div class="section-heading reveal">
           <div class="section-kicker">BEFORE YOU START · 运行准备</div>
           <h2>下载前，确认这些条件</h2>
         </div>
         <div class="requirement-grid">
-          <article class="requirement-card reveal"><span>WIN</span><h3>Windows 10 / 11</h3><p>64 位系统；首次启动如遇安全提示，请确认文件来源后选择继续运行。</p></article>
-          <article class="requirement-card reveal"><span>AI</span><h3>大模型，二选一</h3><p>本地 Ollama 零成本运行（建议 16GB 内存、12GB 空间）；或直接填云端 API，不占本机资源。</p></article>
-          <article class="requirement-card reveal"><span>≈</span><h3>语音引擎按需安装</h3><p>不装引擎也能用云端语音；本地克隆把 engine 文件夹放到 EXE 旁即可，与“只读弹幕”互不影响。</p></article>
+          <article class="requirement-card reveal"><span>WIN</span><h3>系统要求</h3><p>Windows 10 22H2 或 Windows 11 64 位系统，建议安装在 SSD；本地大模型整套预留至少 12GB 磁盘空间。</p></article>
+          <article class="requirement-card reveal"><span>MIN</span><h3>本地模型最低配置</h3><p>现代 4 核处理器、16GB 内存，无独立显卡也能使用 CPU 运行 Qwen2.5 7B；8GB 内存仅能勉强启动，不建议直播使用。</p></article>
+          <article class="requirement-card reveal"><span>REC</span><h3>直播推荐配置</h3><p>6 核 12 线程处理器、32GB 内存、6GB 以上显存；同时运行本地模型与语音引擎时，建议 8GB 以上显存。</p></article>
         </div>
         <div class="notice-card reveal">
           <div class="notice-icon">!</div>
-          <div><b>三个安装包都在网盘分享里，按顺序装</b><p>大语言模型 → 助手本体 → 语音引擎，分开下载、分开安装。升级助手时直接运行新版安装包，原有配置和本地引擎会继续保留；GPT-SoVITS 与 IndexTTS-2 共用 9880 端口，同一时间只运行一个，切换时软件会自动处理。</p></div>
+          <div><b>三个安装包都在网盘分享里，按顺序装</b><p>大语言模型 → 助手本体 → 语音引擎，分开下载、分开安装。低配置电脑可只装助手并接入云端 API；升级助手会保留原有配置和本地引擎。GPT-SoVITS 与 IndexTTS-2 共用 9880 端口，同一时间只运行一个。</p></div>
         </div>
       </div>
     </section>
@@ -386,12 +387,21 @@
       <div class="section-heading reveal">
         <div class="section-kicker">RELEASE NOTES · 更新记录</div>
         <h2>每一次更新，都更稳一点</h2>
-        <p>当前最新版为 v2.1.9。完整操作步骤可打开飞书使用文档查看。</p>
+        <p>当前最新版为 v2.1.19。完整操作步骤可打开飞书使用文档查看。</p>
         <a class="updates-doc-link" href="https://lcnod4qb2omp.feishu.cn/wiki/C0IrwCaTNi3jTckDICwcgnD4ngh?from=from_copylink" target="_blank" rel="noopener noreferrer">打开飞书使用文档 <span>↗</span></a>
       </div>
       <div class="updates-grid">
         <article class="update-card current reveal">
-          <div class="update-meta"><b>v2.1.9</b><span>2026-10-11</span><em>最新</em></div>
+          <div class="update-meta"><b>v2.1.19</b><span>2026-10-13</span><em>最新</em></div>
+          <h3>修复抖音扫码与账号登录</h3>
+          <ul>
+            <li>登录入口切换到新版抖音官网，并自动打开官方登录组件。</li>
+            <li>修复验证码登录提示“系统繁忙”和扫码后的异常跳转提示。</li>
+            <li>保留设备验证信息，登录成功后自动同步 SessionID 与登录 Cookie。</li>
+          </ul>
+        </article>
+        <article class="update-card reveal">
+          <div class="update-meta"><b>v2.1.9</b><span>2026-10-11</span></div>
           <h3>新增版本更新提醒</h3>
           <ul>
             <li>启动并完成授权后自动检查新版，同时增加手动检查更新入口。</li>
@@ -434,7 +444,7 @@
       </div>
       <div class="faq-list">
         <details class="reveal" open><summary>和抖音自带的语音助手有什么区别？<span>＋</span></summary><p>自带的语音助手只能把弹幕读出来。熙梦直播助手的核心是“替你回复”：接入大语言模型理解弹幕并生成回答，配合你的音色播报，还能自动感谢礼物、欢迎进场、冷场救场，并把弹幕转发给互动游戏。大模型和语音都能走本地，装一次长期低成本使用。</p></details>
-        <details class="reveal"><summary>一定要装本地大模型吗？<span>＋</span></summary><p>不用。本地 Ollama 零成本、断网可用，建议 16GB 内存和 12GB 磁盘空间；电脑配置低或想更省事，可以直接在 LLM 接口里填 OpenAI 兼容 API 地址，回复更聪明，按用量付费。</p></details>
+        <details class="reveal"><summary>本地大模型需要什么电脑配置？<span>＋</span></summary><p>当前默认模型是 Qwen2.5 7B。最低建议 Windows 10 22H2 64 位、现代 4 核处理器、16GB 内存和 12GB 可用磁盘；没有独立显卡也能用 CPU 运行。直播推荐 32GB 内存和 6GB 以上显存；同时运行本地模型与语音引擎时建议 8GB 以上显存。配置不足时可直接使用云端 OpenAI 兼容 API。</p></details>
         <details class="reveal"><summary>连接直播间后一直没有弹幕怎么办？<span>＋</span></summary><p>先确认直播间正在开播，并检查左下角连接状态。若提示凭证失效，重新扫码获取 SessionID；若网络拥堵，断开后等待几秒再连接。</p></details>
         <details class="reveal"><summary>本地语音引擎提示“未找到”怎么办？<span>＋</span></summary><p>检查程序目录下是否存在完整的 <code>engine</code> 文件夹，并确保它与“熙梦直播助手.exe”处于同一级目录。补齐后完全退出软件再重新打开。</p></details>
         <details class="reveal"><summary>试听没有声音，或者一直显示启动中？<span>＋</span></summary><p>到“队列与连接”查看服务状态。确认 9880 端口没有被其他程序占用，必要时点击“释放 9880 并重启引擎”。首次加载模型耗时会更长。</p></details>
@@ -448,7 +458,7 @@
     <section class="download-section">
       <div class="download-inner section-shell reveal">
         <img src="assets/app-icon.webp" alt="熙梦直播助手图标" />
-        <div><span>熙梦直播助手 · v2.1.9</span><h2>准备好你的下一场直播</h2><p>从弹幕接收到智能语音回复，一个工作台就够了。网盘分享内含助手本体、本地大模型与语音引擎三个安装包。</p></div>
+        <div><span>熙梦直播助手 · v2.1.19</span><h2>准备好你的下一场直播</h2><p>从弹幕接收到智能语音回复，一个工作台就够了。网盘分享内含助手本体、本地大模型与语音引擎三个安装包。</p></div>
         <div class="download-actions">
           <a class="button button-purchase" href="https://wzyp.cn/shop/xialuoxi/318613" target="_blank" rel="noopener noreferrer">购买激活码 <span>↗</span></a>
           <a class="button button-ghost" href="https://lcnod4qb2omp.feishu.cn/wiki/C0IrwCaTNi3jTckDICwcgnD4ngh?from=from_copylink" target="_blank" rel="noopener noreferrer">使用文档 <span>↗</span></a>

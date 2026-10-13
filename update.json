@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "version": "2.1.9",
-  "title": "熙梦直播助手 2.1.9",
-  "publishedAt": "2026-10-11",
+  "version": "2.1.19",
+  "title": "熙梦直播助手 2.1.19",
+  "publishedAt": "2026-10-13",
   "downloadUrl": "https://pan.quark.cn/s/72c0295bae28?pwd=a874",
   "websiteUrl": "https://kaleomi.github.io/ximeng-live-assistant-website/",
   "notes": [
-    "新增启动自动检查更新和手动检查更新入口",
-    "新增活体、防挂机验证的本机警报与微信远程提醒",
-    "支持按微信联系人备注名发送消息并拨打微信语音电话",
-    "优化本地模型和后台服务的启动、退出与状态显示"
+    "抖音登录入口切换到新版官网并自动打开官方登录组件",
+    "修复验证码登录提示系统繁忙的问题",
+    "修复扫码后的 bytedance 深链异常提示",
+    "登录成功后自动同步 SessionID 与相关 Cookie"
   ],
-  "sha256": "B10A1C1386CC2321E9768C8DA79A8F2C0FCCE0B06EC72C4545885CA8C1236089"
+  "sha256": "8CBDFC6AEA583EC04D9B8B51F350BFFC1026F8A015ED96D5D253B52D7966A21D"
 }
