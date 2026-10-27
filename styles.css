@@ -1777,6 +1777,28 @@ pre {
   font-weight: 900;
 }
 
+.games-section { background: #f2f6fb; margin-bottom: 24px; }
+.games-section .section-heading p { max-width: 640px; }
+.games-link {
+  margin-top: 18px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+  text-decoration: none;
+  background: linear-gradient(135deg, #10306f, #0a1840);
+  box-shadow: 0 18px 40px rgba(10, 24, 64, 0.18);
+}
+.games-link img { border-radius: 12px; }
+.games-link b { display: block; font-size: 15px; }
+.games-link small { display: block; margin-top: 3px; color: #a9bbe0; font-size: 11px; }
+.games-link em { font-style: normal; font-weight: 800; font-size: 13px; color: var(--mint); }
+.games-link:hover em { text-decoration: underline; }
+@media (max-width: 640px) { .games-link { grid-template-columns: 44px 1fr; } .games-link em { grid-column: 1 / -1; } }
+
 .notice-card b { font-size: 13px; }
 .notice-card p { margin: 5px 0 0; color: #7e715c; font-size: 11px; line-height: 1.75; }
 
