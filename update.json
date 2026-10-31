@@ -1,15 +1,17 @@
 {
   "schemaVersion": 1,
-  "version": "2.1.19",
-  "title": "熙梦直播助手 2.1.19",
-  "publishedAt": "2026-10-13",
+  "version": "2.1.26",
+  "title": "熙梦直播助手 2.1.26",
+  "publishedAt": "2026-10-31",
   "downloadUrl": "https://pan.quark.cn/s/72c0295bae28?pwd=a874",
   "websiteUrl": "https://kaleomi.github.io/ximeng-live-assistant-website/",
   "notes": [
-    "抖音登录入口切换到新版官网并自动打开官方登录组件",
-    "修复验证码登录提示系统繁忙的问题",
-    "修复扫码后的 bytedance 深链异常提示",
-    "登录成功后自动同步 SessionID 与相关 Cookie"
+    "新增配套引擎一键安装，统一部署语音环境、Ollama 与离线 Qwen2.5 7B",
+    "Ollama 程序和模型部署到所选直播助手目录，不再默认安装到 C 盘",
+    "修复首次导入后模型不可见的问题，自动识别专用本地接口并填写配置",
+    "隐藏模型启动命令行窗口，避免重复启动，退出时清理自有模型进程树",
+    "包含 B站新版弹幕和批量礼物解析、左下角登录及诊断导出",
+    "内置 Edge 在线语音，保留月卡授权和原有云端接口配置"
   ],
-  "sha256": "8CBDFC6AEA583EC04D9B8B51F350BFFC1026F8A015ED96D5D253B52D7966A21D"
+  "sha256": "A45A345ECA293B31E5AC3C909993CFC11568EF5E5C51CDF7F5CC07D0C624D475"
 }

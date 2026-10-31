@@ -48,7 +48,10 @@ document.querySelectorAll('.reveal').forEach((element, index) => {
 });
 
 const navSections = navLinks
-  .map((link) => document.querySelector(link.getAttribute('href')))
+  .map((link) => {
+    const href = link.getAttribute('href') || '';
+    return href.startsWith('#') ? document.getElementById(href.slice(1)) : null;
+  })
   .filter(Boolean);
 
 const syncActiveNav = () => {
